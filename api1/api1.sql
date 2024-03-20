@@ -32,16 +32,17 @@ CREATE TABLE `etudiant` (
   `nom` varchar(150) NOT NULL,
   `prenom` varchar(150) NOT NULL,
   `age` int NOT NULL,
+  `niveau_id` int NOT NULL,
   `creted_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `salle`
+-- Structure de la table `niveau`
 --
 
-CREATE TABLE `salle` (
+CREATE TABLE `niveau` (
   `id` int NOT NULL,
   `nom` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -57,9 +58,9 @@ ALTER TABLE `etudiant`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `salle`
+-- Index pour la table `niveau`
 --
-ALTER TABLE `salle`
+ALTER TABLE `niveau`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -73,9 +74,9 @@ ALTER TABLE `etudiant`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `salle`
+-- AUTO_INCREMENT pour la table `niveau`
 --
-ALTER TABLE `salle`
+ALTER TABLE `niveau`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 

@@ -5,7 +5,7 @@ class database
     private $host = 'localhost';
     private $dbname  = 'api1';
     private $userName = 'root';
-    private $password = '';
+    private $password = 'zxc,./';
 
     public function connexionDB()
     {
@@ -16,7 +16,7 @@ class database
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
             ]);
-            echo 'connection';
+            // echo 'connection';
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
         }
